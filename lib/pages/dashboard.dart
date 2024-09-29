@@ -1,3 +1,5 @@
+import 'package:finance/pages/contacts_list.dart';
+import 'package:finance/pages/transfer_list.dart';
 import 'package:flutter/material.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -19,9 +21,7 @@ class DashboardScreen extends StatelessWidget {
           children: <Widget>[
             // Botão de Contatos
             GestureDetector(
-              onTap: () {
-                // Ação para abrir a tela de Contatos
-              },
+              onTap: () => Navigator.pushNamed(context, '/listaContatos'),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.green,
@@ -42,9 +42,7 @@ class DashboardScreen extends StatelessWidget {
             ),
             // Botão de Transferências
             GestureDetector(
-              onTap: () {
-                // Ação para abrir a tela de Transferências
-              },
+              onTap: () => Navigator.pushNamed(context, '/listaTransferencia'),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.yellow,
@@ -57,7 +55,10 @@ class DashboardScreen extends StatelessWidget {
                     SizedBox(height: 10),
                     Text(
                       'Transferências',
-                      style: TextStyle(fontSize: 18, color: Colors.white),
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
                     ),
                   ],
                 ),

@@ -1,3 +1,6 @@
+import 'package:finance/pages/contacts_form.dart';
+import 'package:finance/pages/contacts_list.dart';
+import 'package:finance/pages/transfer_form.dart';
 import 'package:finance/pages/transfer_list.dart';
 import 'package:flutter/material.dart';
 import 'package:finance/pages/dashboard.dart';
@@ -13,10 +16,13 @@ class Banco extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (ctx) => const DashboardScreen(),
-        '/listaTransferencia': (ctx) => ListaTransferencia()
+        '/listaTransferencia': (ctx) => ListaTransferencia(),
+        '/formularioTransferencia': (ctx) => FormularioTransferencia(),
+        '/listaContatos': (ctx) => ListaContatos(),
+        '/formularioContatos': (ctx) => const FormularioContatos()
       },
       theme: ThemeData(
-        primaryColor: Colors.blue,
+        colorSchemeSeed: Colors.blue,
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.purple,

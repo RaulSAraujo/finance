@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:finance/models/transferencia.dart';
 
 class ItemTransferencia extends StatelessWidget {
   final Transferencia _transferencia;
@@ -9,22 +10,11 @@ class ItemTransferencia extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        leading: const Icon(Icons.monetization_on, color: Colors.green),
-        title: Text(_transferencia.valor.toString()),
+        leading: const Icon(Icons.monetization_on, color: Colors.purple),
+        title: Text(
+            'R\$ ${_transferencia.valor.toStringAsFixed(2).replaceAll('.', ',')}'),
         subtitle: Text(_transferencia.numeroConta.toString()),
       ),
     );
-  }
-}
-
-class Transferencia {
-  final double valor; //
-  final int numeroConta;
-
-  Transferencia(this.valor, this.numeroConta);
-
-  @override
-  String toString() {
-    return 'Transferência{valor: $valor, numeroConta: $numeroConta}';
   }
 }
